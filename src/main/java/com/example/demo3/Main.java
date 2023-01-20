@@ -1,5 +1,8 @@
 package com.example.demo3;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -31,6 +34,42 @@ public class Main {
                 System.out.println(s);
             }
         }
+
+        ArrayList<Integer> numbers = new ArrayList();
+
+        for (int i=0; i<10; i++) {
+
+            numbers.add(i*10);
+
+        }
+
+        int sum = 0;
+        for (Integer o : numbers) {
+//        for (Object o : numbers) {
+//            sum = sum + (Integer) o;
+//            System.out.println((Integer) o);
+            sum = sum + o;
+        }
+
+        System.out.println(sum);
+
+        ArrayList<String> listHello = new ArrayList<>();
+        listHello.add("Hello");
+        listHello.add("Hi");
+
+        ArrayList<String> listBye = new ArrayList<>();
+        listBye.add("Good bye");
+        listBye.add("Bye");
+
+        ArrayList<ArrayList<String>> list = new ArrayList<>();
+        list.add(listHello);
+        list.add(listBye);
+
+        for(ArrayList<String> spisok:list) {
+            for (String s : spisok)
+            System.out.println(s);
+        }
+
 
     }
 
